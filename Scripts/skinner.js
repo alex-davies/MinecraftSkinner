@@ -394,7 +394,6 @@ $(document).ready(function () {
     }
 
     $('#SkinLoader').load(function () {
-debugger;
         var img = this;
         suppressImageUpdate = true;
         var imageReader = buildImageReader(this);
