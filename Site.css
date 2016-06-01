@@ -1,0 +1,332 @@
+        @font-face
+	    {
+	        font-family: "Minecraft Regular";
+	        src: url("Fonts/minecraft_font.woff") format("woff");
+	    }
+
+        .unselectable {
+           -moz-user-select: -moz-none;
+           -khtml-user-select: none;
+           -webkit-user-select: none;
+           user-select: none;
+        }
+
+	    body
+	    {
+            background-color: #FAFAFA;
+            font-family: Helvetica, Arial, sans-serif;
+	    }
+
+	    h1
+	    {
+            padding: 10px 20px 20px 20px;
+            margin: 0px;
+            font-family:Minecraft Regular;
+            font-size:24px;
+            
+	    }
+        
+		#Content{
+			margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            margin-bottom:20px;
+            width: 800px;
+            border: 1px solid #888;
+            background-color: #FFF;
+            height:510px;
+            border-radius: 5px;
+ 
+		}
+
+	    #OptionsSection
+	    {
+             width:815px;
+             background-color:#FFFFFF;
+            /*border-bottom:3px solid #888;*/
+            height:50px;
+            padding:2px 0px 0px 0px;
+            padding: 2px 0px;
+            overflow:hidden;
+            box-shadow: 6px 6px 15px #AAAAAA;
+            border:solid 1px black;
+            z-index:10000;
+            position:relative;
+            top:-5px;
+            left:-10px;
+	    }
+        
+	    #SideSection
+	    {
+            width: 248px;
+            height:400px;
+            float:left;
+
+            border-right: 2px dashed #888888;
+	    }
+
+	    #MainSection
+	    {
+            width: 550px;
+            height:400px;
+            float:left;
+	    }
+
+
+
+        #OptionsSection ul
+	    {
+            margin:0px;
+            padding:0px;
+            overflow:hidden;
+	    }
+        
+	    #OptionsSection ul li
+	    {
+            float:left;
+            margin: 0px 5px;
+            height:50px;
+	    }
+
+	    #OptionsSection .skin-container
+	    {
+            width:240px;
+	    }
+        
+
+	    #OptionsSection #SkinImage
+	    {
+            margin:9px;
+            vertical-align:middle;
+            border: 1px solid #888888;
+	    }
+
+
+	   
+
+	    #OptionsSection ul li.button
+	    {
+            border: 1px solid transparent;
+            background-repeat:no-repeat;
+            width:48px;
+            height:48px;
+            border-radius:5px;
+            background-image:url('Images/ButtonHover-48.png');
+            
+            transition: background 0.2s ease-out, border-color 0.2s ease-out;
+            -moz-transition: background 0.2s ease-out, border-color 0.2s ease-out;
+            -webkit-transition: background 0.2s ease-out, border-color 0.2s ease-out;
+            -o-transition: background 0.2s ease-out, border-color 0.2s ease-out;
+	    }
+        
+        #OptionsSection ul li.button:hover
+	    {
+            border: 1px solid #F1CA58;
+            background-color:#FFEFC6;
+           
+	    }
+
+        #OptionsSection ul li.button.selected
+	    {
+            border: 1px solid #C28A30;
+            background-color:#FFE4A8;
+           
+           
+	    }
+        
+	    #OptionsSection span
+	    {
+                
+            color:#aaa;
+            font-size:10px;
+            height:32px;
+            margin:0px 5px;
+            line-height:100%;
+              
+	    }
+
+         #OptionsSection .color-picker
+	    {
+            display:none;
+	    }
+
+	    #OptionsSection .color-container
+	    {
+            margin:0px 10px 0px 20px;
+	    }
+         
+	    #OptionsSection .color-picker-wrap
+	    {
+            float:right;
+            clear:right;
+            margin:1px;
+	    }
+
+	   
+
+
+
+
+        
+        #OptionsSection .icon:hover
+	    {
+           border: 1px solid #FFFF00;
+           border-radius: 2px;
+           
+	    }
+
+	    #OptionsSection .button a
+	    {
+            display:inline-block;
+            width:100%;
+            height:100%;
+            background-position:center center;
+	    }
+        
+	    #OptionsSection .paint.button a
+	    {
+            background-image:url('Images/Brush-48.png')
+	    }
+        
+        #OptionsSection .fill.button a
+	    {
+            background-image:url('Images/Paint-48.png')
+	    }
+        
+         #OptionsSection .color-dropper.button a
+	    {
+            background-image:url('Images/Drop-48.png')
+	    }
+
+        #SkinLoader
+        {
+            display:none;
+        }
+                
+                
+		#PreviewModel, #MainModel
+		{
+			
+			width:1px;
+			height:1px;
+			overflow:visible;
+			position:relative;
+
+			top:50%;
+			left:50%;
+
+		}
+
+
+		.block
+		{
+			overflow:visible;
+		}
+		
+		.face
+		{
+
+			background-color:#eee;
+			position:absolute;
+			border: 1px solid #888;
+		}
+
+		#PreviewModel .cell
+		{
+			float:left;
+			width: 6px;
+			height: 6px;
+			
+			
+		}
+
+        #PreviewModel .block .face
+        {
+              transition: background 0.2s ease-out, border-color 0.2s ease-out;
+            -moz-transition: background 0.2s ease-out, border-color 0.2s ease-out;
+            -webkit-transition: background 0.2s ease-out, border-color 0.2s ease-out;
+            -o-transition: background 0.2s ease-out, border-color 0.2s ease-out;
+        }
+        
+         #PreviewModel .block:hover .face
+	    {
+            background-color:#FFEFC6;
+            border-color:#F1CA58;
+	    }
+         
+          #PreviewModel .block.selected .face
+	    {
+            background-color:#FFE4A8;
+            border-color:#C28A30;
+	    }
+        
+	    
+	    #PreviewModel .block:hover .cell, #PreviewModel .block.selected .cell
+	    {
+            
+            opacity:0.6;
+	    }
+        
+        #MainModel .cell
+	    {
+            border: 0px solid rgba(255,255,255,0.2);
+            float:left;
+			width: 15px;
+			height: 15px;
+			
+	    }
+		
+		
+		#DropSection
+	    {
+            width: 710px;
+            height:330px;
+            /*background-color:#dbffde*/;
+            border: 4px dashed #888888;
+            margin:  0 20px 20px 20px;
+            padding:20px;
+            
+			 transition: background 0.2s ease-out, border-color 0.2s ease-out;
+            -moz-transition: background 0.2s ease-out, border-color 0.2s ease-out;
+            -webkit-transition: background 0.2s ease-out, border-color 0.2s ease-out;
+            -o-transition: background 0.2s ease-out, border-color 0.2s ease-out;
+			
+             display:none;
+	    }
+		
+			#DropSection p
+			{
+				display:table-cell;
+				vertical-align:middle;
+				text-align:center;
+				font-size:24px;
+				color:#888888;
+			}
+			#DropSection p.disallowed-message
+			{
+				display:none;
+			}
+			#DropSection p.allowed-message
+			{
+				display:table-cell;
+			}
+
+	        #DropSection.drop-allowed
+	        {
+                border-color:#F1CA58;
+				background-color:#FFF7E8;
+	        }
+            
+       
+
+	    .drag-drop #DropSection
+	    {
+            display:table;
+	    }
+
+
+        .drag-drop #MainSection,
+        .drag-drop #SideSection
+	    {
+            display:none;
+	    }
